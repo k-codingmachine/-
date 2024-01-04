@@ -1,7 +1,10 @@
-package Cond.ex;
-public class MovieRateEx {
+package cond.ex;
+
+public class MoveRateEx {
+
     public static void main(String[] args) {
         double rating = 7.1;
+
         if (rating <= 9) {
             System.out.println("'어바웃타임'을 추천합니다.");
         }
@@ -13,4 +16,3 @@ public class MovieRateEx {
         }
     }
 }
-
