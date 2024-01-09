@@ -37,7 +37,7 @@ class Ex6_4 {
 	}
 	// 두 값을 받아서 둘중에 큰 값을 반환하는 메소드를 작성하시오.
 	long max (long a, long b) {
-		return a>b ? a : b;
+		return a>b ? a : b; // 삼항연산자
 	}
 	
 	long subtract(long a, long b) { return a - b; }
