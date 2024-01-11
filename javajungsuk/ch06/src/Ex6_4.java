@@ -6,7 +6,6 @@ class Ex6_4 {
 		long result3 = mm.multiply(5L, 3L);
 		double result4 = mm.divide(5L, 3L);
 		long result5 = mm.max(3L, 5L);
-		long result6 = mm.min(3L, 4L);
 		mm.gugudan(3);
 
 		System.out.println("add(5L, 3L) = " + result1);
@@ -14,8 +13,6 @@ class Ex6_4 {
 		System.out.println("multiply(5L, 3L) = " + result3);
 		System.out.println("divide(5L, 3L) = " + result4);
 		System.out.println("max(3L, 5L) = " + result5);
-		System.out.println("min(3L, 4L) = " + result6);
-
 	}
  }
 
@@ -42,9 +39,6 @@ class Ex6_4 {
 		return a>b ? a : b; // 삼항연산자
 	}
 	
-	long min (long a, long b) {
-		return a<b ? a : b;
-	}
 	
 	long subtract(long a, long b) { return a - b; }
 	long multiply(long a, long b) { return a * b; }
