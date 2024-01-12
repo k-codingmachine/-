@@ -1,13 +1,14 @@
 class Ex6_10 {
 	public static void main(String args[]) {
 		MyMath3 mm = new MyMath3();
-		System.out.println("mm.add(3, 3) °á°ú:"    + mm.add(3,3));
-		System.out.println("mm.add(3L, 3) °á°ú: "  + mm.add(3L,3));
-		System.out.println("mm.add(3, 3L) °á°ú: "  + mm.add(3,3L));
-		System.out.println("mm.add(3L, 3L) °á°ú: " + mm.add(3L,3L));
+//		The method add(int, long) is ambiguous for the type MyMath3(ëª¨í˜¸í•˜ë‹¤)
+//		System.out.println("mm.add(3, 3) ê²°ê³¼:"    + mm.add(3,3));
+		System.out.println("mm.add(3L, 3) ê²°ê³¼: "  + mm.add(3L,3));
+		System.out.println("mm.add(3, 3L) ê²°ê³¼: "  + mm.add(3,3L));
+		System.out.println("mm.add(3L, 3L) ê²°ê³¼: " + mm.add(3L,3L));
 
 		int[] a = {100, 200, 300};
-		System.out.println("mm.add(a) °á°ú: " + mm.add(a));
+		System.out.println("mm.add(a) ê²°ê³¼: " + mm.add(a));
    }
 }
 
@@ -16,6 +17,8 @@ class MyMath3 {
 		System.out.print("int add(int a, int b) - ");
 		return a+b;
 	}
+	
+	
 	
 	long add(int a, long b) {
 		System.out.print("long add(int a, long b) - ");
@@ -32,7 +35,7 @@ class MyMath3 {
 		return a+b;
 	}
 
-	int add(int[] a) {		// ¹è¿­ÀÇ ¸ðµç ¿ä¼ÒÀÇ ÇÕÀ» °á°ú·Î µ¹·ÁÁØ´Ù.
+	int add(int[] a) {		// ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø´ï¿½.
 		System.out.print("int add(int[] a) - ");
 		int result = 0;
 		for(int i=0; i < a.length;i++) 
