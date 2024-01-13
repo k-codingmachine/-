@@ -17,8 +17,10 @@ class MyMath3 {
 		System.out.print("int add(int a, int b) - ");
 		return a+b;
 	}
-	
-	
+	int minus(int a, int b) {
+		System.out.println("int minus(int a, int b");
+		return a - b;
+	}
 	
 	long add(int a, long b) {
 		System.out.print("long add(int a, long b) - ");
