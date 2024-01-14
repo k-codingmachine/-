@@ -67,3 +67,7 @@
 /InheritanceTest.class
 /Circle.class
 /MyPoint.class
+/OverrideTest.class
+/MyPoint3.class
+/MyPoint3D.class
+/MyPoint3$OverrideTest.class
