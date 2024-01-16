@@ -13,7 +13,7 @@
 //		return "x :" + x  + ", y :" + y + ", z :" + z; 
 //	}
 //}
-
+// 상속!
 class MyPoint3 extends Object{
 	int x;
 	int y;
