@@ -1,20 +1,20 @@
 class Product {
-	int price;			// Á¦Ç°ÀÇ °¡°İ
-	int bonusPoint;	// Á¦Ç°±¸¸Å ½Ã Á¦°øÇÏ´Â º¸³Ê½ºÁ¡¼ö
+	int price;			// ì œí’ˆì˜ ê°€ê²©
+	int bonusPoint;	// ì œí’ˆêµ¬ë§¤ ì‹œ ì œê³µí•˜ëŠ” ë³´ë„ˆìŠ¤ ì ìˆ˜
 
 	Product(int price) {
 		this.price = price;
-		bonusPoint = (int)(price/10.0);	// º¸³Ê½ºÁ¡¼ö´Â Á¦Ç°°¡°İÀÇ 10%
+		bonusPoint = (int)(price/10.0);	// ë³´ë„ˆìŠ¤ì ìˆ˜ëŠ” ì œí’ˆê°€ê²©ì˜ 10%
 	}
 }
 
 class Tv1 extends Product {
 	Tv1() {
-		// Á¶»óÅ¬·¡½ºÀÇ »ı¼ºÀÚ Product(int price)¸¦ È£ÃâÇÑ´Ù.
-		super(100);		// TvÀÇ °¡°İÀ» 100¸¸¿øÀ¸·Î ÇÑ´Ù.
+		// ì¡°ìƒí´ë˜ìŠ¤ì˜ ìƒì„±ì Product(int price)ë¥¼ í˜¸ì¶œí•œë‹¤.
+		super(100);		// Tvì˜ ê°€ê²©ì„ 100ë§Œì›ìœ¼ë¡œ í•œë‹¤.
 	}
 
-	// ObjectÅ¬·¡½ºÀÇ toString()À» ¿À¹ö¶óÀÌµùÇÑ´Ù.
+	// Objectí´ë˜ìŠ¤ì˜ toString()ì„ ì˜¤ë²„ë¼ì´ë”©í•œë‹¤.
 	public String toString() { return "Tv"; }
 }
 
@@ -24,19 +24,19 @@ class Computer extends Product {
 	public String toString() { return "Computer"; }
 }
 
-class Buyer {	// °í°´, ¹°°ÇÀ» »ç´Â »ç¶÷
-	int money = 1000;	  // ¼ÒÀ¯±İ¾×
-	int bonusPoint = 0; // º¸³Ê½ºÁ¡¼ö
+class Buyer {	// ê³ ê°, ë¬¼ê±´ì„ ì‚¬ëŠ” ì‚¬ëŒ
+	int money = 1000;	  // ì†Œìœ  ê¸ˆì•¡
+	int bonusPoint = 0; // ë³´ë„ˆìŠ¤ ì ìˆ˜
 
 	void buy(Product p) {
 		if(money < p.price) {
-			System.out.println("ÀÜ¾×ÀÌ ºÎÁ·ÇÏ¿© ¹°°ÇÀ» »ì ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("ì”ì•¡ì´ ë¶€ì¡±í•˜ì—¬ ë¬¼ê±´ì„ ì‚´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 			return;
 		}
 
-		money -= p.price;            // °¡Áø µ·¿¡¼­ ±¸ÀÔÇÑ Á¦Ç°ÀÇ °¡°İÀ» »«´Ù.
-		bonusPoint += p.bonusPoint;  // Á¦Ç°ÀÇ º¸³Ê½º Á¡¼ö¸¦ Ãß°¡ÇÑ´Ù.
-		System.out.println(p + "À»/¸¦ ±¸ÀÔÇÏ¼Ì½À´Ï´Ù.");
+		money -= p.price;            // ê°€ì§„ ëˆì—ì„œ êµ¬ì…í•œ ì œí’ˆì˜ ê°€ê²©ì„ ëº€ë‹¤.
+		bonusPoint += p.bonusPoint;  // ì œí’ˆì˜ ë³´ë„ˆìŠ¤ ì ìˆ˜ë¥¼ ì¶”ê°€í•œë‹¤.
+		System.out.println(p + "ì„/ë¥¼ êµ¬ì…í•˜ì…¨ìŠµë‹ˆë‹¤.");
 	}
 }
 
@@ -44,10 +44,12 @@ class Ex7_8 {
 	public static void main(String args[]) {
 		Buyer b = new Buyer();
 
-		b.buy(new Tv1());
-		b.buy(new Computer());
+		Product p = new Tv1();
+		b.buy(p);
+//		b.buy(new Tv1()); // buy(Product p) ìœ„ì— ì½”ë“œì™€ ë™ì¼í•œ ì½”ë“œ
+		b.buy(new Computer()); // buy(Product p)
 
-		System.out.println("ÇöÀç ³²Àº µ·Àº " + b.money + "¸¸¿øÀÔ´Ï´Ù.");
-		System.out.println("ÇöÀç º¸³Ê½ºÁ¡¼ö´Â " + b.bonusPoint + "Á¡ÀÔ´Ï´Ù.");
+		System.out.println("í˜„ì¬ ë‚¨ì€ ëˆì€ " + b.money + "ë§Œì›ì…ë‹ˆë‹¤.");
+		System.out.println("í˜„ì¬ ë³´ë„ˆìŠ¤ ì ìˆ˜ëŠ” " + b.bonusPoint + "ì ì…ë‹ˆë‹¤.");
 	}
 }

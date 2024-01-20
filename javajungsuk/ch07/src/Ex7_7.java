@@ -26,7 +26,7 @@ class Car {
 }
 
 class FireEngine extends Car {	// �ҹ���
-	void water() {	// ���� �Ѹ��� ���
+	void water() {	// ���� �Ѹ��� �� �
 		System.out.println("water!!!");
 	}
 }

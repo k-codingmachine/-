@@ -1,7 +1,13 @@
 public class Ex7_10 {
 	public static void main(String[] args) {
-		Unit[] group = { new Marine(), new Tank(), new Dropship() };
-
+//		Unit[] group = { new Marine(), new Tank(), new Dropship() };
+		Unit[] group = new Unit[3];
+		group[0] = new Marine();
+		group[1] = new Tank();
+		group[2] = new Dropship();
+		// ìœ„ì— ì£¼ì„ì¤„ê³¼ ì•„ë˜ 4ì¤„ì€ ê°™ë‹¤.
+		
+		
 		for (int i = 0; i < group.length; i++)
 			group[i].move(100, 200);
 	}
@@ -10,27 +16,27 @@ public class Ex7_10 {
 abstract class Unit {
 	int x, y;
 	abstract void move(int x, int y);
-	void stop() { /* ÇöÀç À§Ä¡¿¡ Á¤Áö */ }
+	void stop() { /* í˜„ì¬ ìœ„ì¹˜ì— ì •ì§€ */ }
 }
 
-class Marine extends Unit { // º¸º´
+class Marine extends Unit { // ë³´ë³‘
 	void move(int x, int y) {
 		System.out.println("Marine[x=" + x + ",y=" + y + "]");
 	}
-	void stimPack() { /* ½ºÆÀÆÑÀ» »ç¿ëÇÑ´Ù. */ }
+	void stimPack() { /* ìŠ¤íŒ€íŒ©ì„ ì‚¬ìš©í•œë‹¤. */ }
 }
 
-class Tank extends Unit { // ÅÊÅ©
+class Tank extends Unit { // íƒ±í¬
 	void move(int x, int y) {
 		System.out.println("Tank[x=" + x + ",y=" + y + "]");
 	}
-	void changeMode() { /* °ø°İ¸ğµå¸¦ º¯È¯ÇÑ´Ù. */ }
+	void changeMode() { /* ê³µê²©ëª¨ë“œë¡œ ì „í™˜í•œë‹¤. */ }
 }
 
-class Dropship extends Unit { // ¼ö¼Û¼±
+class Dropship extends Unit { // ï¿½ï¿½ï¿½Û¼ï¿½
 	void move(int x, int y) {
 		System.out.println("Dropship[x=" + x + ",y=" + y + "]");
 	}
-	void load()   { /* ¼±ÅÃµÈ ´ë»óÀ» ÅÂ¿î´Ù. */ }
-	void unload() { /* ¼±ÅÃµÈ ´ë»óÀ» ³»¸°´Ù. */ }
+	void load()   { /* ï¿½ï¿½ï¿½Ãµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Â¿ï¿½ï¿½. */ }
+	void unload() { /* ï¿½ï¿½ï¿½Ãµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½. */ }
 }
