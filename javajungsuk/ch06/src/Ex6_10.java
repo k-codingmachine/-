@@ -37,7 +37,7 @@ class MyMath3 {
 		return a+b;
 	}
 
-	int add(int[] a) {		// �迭�� ��� ����� ���� ����� �����ش�.
+	int add(int[] a) {	
 		System.out.print("int add(int[] a) - ");
 		int result = 0;
 		for(int i=0; i < a.length;i++) 
