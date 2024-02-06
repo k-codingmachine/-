@@ -7,7 +7,7 @@ class MyPoint{
 //	int r;
 //}
 
-class Circle{
+class Circle{ // 포함
 	MyPoint p = new MyPoint();
 	int r;
 }
