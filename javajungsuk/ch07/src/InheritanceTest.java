@@ -1,4 +1,4 @@
-class MyPoint{
+class MyPoint{ //컴파일시 extends Object
 	int x;
 	int y;
 }
@@ -7,7 +7,7 @@ class MyPoint{
 //	int r;
 //}
 
-class Circle{ // 포함
+class Circle{ // 포함     {컴파일시 extends Object}
 	MyPoint p = new MyPoint();
 	int r;
 }
