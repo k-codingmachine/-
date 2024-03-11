@@ -6,9 +6,9 @@ class Ex7_7 {
 
 		fe.water();
 		car = fe;    // car = (Car)fe;에서 형변환이 생략됨
-//		car.water(); // 에러. Car타입의 참조변수인 car로는 water()를 사용불가.
+//		car.water(); // 에러. Car타입의 참조변수인 car로는 water()를 사용불가
 		fe2 = (FireEngine)car; // 자손타입 <- 조상타입. 형변환 생략 불가
-		fe2.water();
+		fe2.water(); // 다시 리모콘 변경
 	}
 }
 
@@ -25,8 +25,8 @@ class Car {
 	}
 }
 
-class FireEngine extends Car {	// �ҹ���
-	void water() {	// ���� �Ѹ��� �� �
+class FireEngine extends Car {	//소방차
+	void water() {	// 물을 뿌리는 기능
 		System.out.println("water!!!");
 	}
 }
