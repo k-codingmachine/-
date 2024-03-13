@@ -22,7 +22,7 @@ class Fighter extends Unit2 implements Fightable{
 		System.out.println(f + "를 공격");
 	}
 	// 싸울 수 있는 상대를 불러온다
-	Fightable getFightable() {
+	Fightable getFightable() { // 반환타입이 인터페이스이면 인터페이스를 구현한 객체를 반환한다.
 		Fighter f = new Fighter(); // Fighter를 생성해서 반환
 		return f;
 	}
