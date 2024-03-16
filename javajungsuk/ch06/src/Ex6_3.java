@@ -13,7 +13,7 @@ class Ex6_3 {
 
 		System.out.println("c1 " + c1.kind + ", " + c1.number + "�̸�, ũ��� (" + c1.width + ", " + c1.height + ")");
 		System.out.println("c2 " + c2.kind + ", " + c2.number + "�̸�, ũ��� (" + c2.width + ", " + c2.height + ")");
-		System.out.println("c1 width height  50, 80으로 변경.");
+		System.out.println("c1 width height  50, 80으로 변경합니다.");
 		c1.width = 50;
 		c1.height = 80;
 
