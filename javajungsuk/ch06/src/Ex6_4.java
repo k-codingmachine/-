@@ -17,7 +17,7 @@ class Ex6_4 {
  }
 
  class MyMath {
-	 void gugudan (int dan) {
+	 void gugudan (int dan) { // 구구단 출력하는 메서드
 		 if(!(2 <= dan && dan <=9)) 
 			 return;
 			 for(int i=1; i<=9; i++) {
