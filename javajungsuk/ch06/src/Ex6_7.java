@@ -11,7 +11,7 @@ class Ex6_7 {
 		System.out.println("main() : x = " + d.x);
 	}
 
-	static void change(Data2 d) { // ÂüÁ¶Çü ¸Å°³º¯¼ö
+	static void change(Data2 d) { // ì°¸ì¡°ë³€ìˆ˜ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ í•˜ëŠ”!
 		d.x = 1000;
 		System.out.println("change() : x = " + d.x);
 	}

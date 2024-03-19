@@ -11,10 +11,10 @@ class Ex6_8 {
 	}
 
 	static Data3 copy(Data3 d) {
-		Data3 tmp = new Data3();    // 새로운 객체 tmp를 생성한다.
+		Data3 tmp = new Data3();    
 
-		tmp.x = d.x;  // d.x의 값을 tmp.x에 복사한다.
+		tmp.x = d.x;  
 
-		return tmp;   // 복사한 객체의 주소를 반환한다.
+		return tmp;  
 	}
 }
