@@ -7,7 +7,7 @@ class Ex6_10 {
 		System.out.println("mm.add(3, 3L) 결과: "  + mm.add(3,3L));
 		System.out.println("mm.add(3L, 3L) 결과: " + mm.add(3L,3L));
 
-		int[] a = {100, 200, 300};
+		int[] a = {100, 200, 300}; // 배열 생성후 초기화까지!
 		System.out.println("mm.add(a) 결과: " + mm.add(a));
    }
 }
