@@ -12,7 +12,7 @@ class Ex6_10 {
    }
 }
 
-class MyMath3 { // 산술 클래스를 선언한다.
+class MyMath3 { // 산술 클래스를 선언한다!
 	int add(int a, int b) {
 		System.out.print("int add(int a, int b) - ");
 		return a+b;
