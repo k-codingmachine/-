@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 
 @Component
+//@primary
 public class OrderServiceImpl implements OrderService{
 
     private final MemberRepository memberRepository;
