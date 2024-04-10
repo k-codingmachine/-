@@ -40,7 +40,7 @@ public class SingletonWithPrototypeTest1 {
 
 
     }
-    @Scope("singleton")
+    @Scope("singleton") // 싱글톤방식!
     static class ClientBean{
 
         @Autowired
